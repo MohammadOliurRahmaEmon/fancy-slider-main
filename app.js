@@ -80,6 +80,8 @@ const createSlider = () => {
   // hide image aria
   imagesArea.style.display = "none";
   var duration = document.getElementById("duration").value || 1000;
+  //Extra feature(converted millisecond to second)
+  duration = duration*1000;
   sliders.forEach((slide) => {
     let item = document.createElement("div");
     item.className = "slider-item";
@@ -161,7 +163,7 @@ sliderBtn.addEventListener("click", function () {
     }
   });
 
-//extra features toggle spinner
+//extra features(toggle spinner)
 const toggleSpinner = (show) => {
   const spinner = document.getElementById("loading-spinner");
   if (show == true) {
